@@ -1,0 +1,9 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/MVCTestApplication/.vs/MVCTestApplication/v16
+/MVCTestApplication/bin/Debug/netcoreapp3.1
+/MVCTestApplication/obj
+/MVCTestApplication/MVCTestApplication.csproj.user
