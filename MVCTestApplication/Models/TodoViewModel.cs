@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MVCTestApplication.Models
 {
-    public class TodoViewModel
+    public class TodoViewModel 
     {
         public IEnumerable<TodoItem> Items { get; set; }
     }
