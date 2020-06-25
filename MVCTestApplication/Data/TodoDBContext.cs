@@ -5,6 +5,10 @@ namespace MVCTestApplication.Data
 {
     public class TodoDBContext:DbContext
     {
+        public TodoDBContext()
+        {
+               
+        }
         public TodoDBContext(DbContextOptions<TodoDBContext> options) :base(options)
         {            
         }

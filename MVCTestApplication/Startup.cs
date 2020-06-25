@@ -24,7 +24,7 @@ namespace MVCTestApplication
         {
 
             services.AddControllersWithViews();
-            services.AddSingleton<ITodoItemService, FakeTodoItemService>();
+            services.AddScoped<ITodoItemService,RealTodoItemService>();
             services.AddDbContext<TodoDBContext>(options =>
                 options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
         }
