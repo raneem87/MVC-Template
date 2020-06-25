@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace MVCTestApplication.Utilities
 {
-    public statis class KodliyoruzHumanizer:Humanizer.TimeSpanHumanizeExtensions
-    {
+    public  class KodliyoruzHumanizer
+    { 
     }
 }

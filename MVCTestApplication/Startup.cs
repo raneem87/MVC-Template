@@ -1,8 +1,10 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using MVCTestApplication.Data;
 using MVCTestApplication.Models;
 using MVCTestApplication.Services;
 
@@ -22,7 +24,9 @@ namespace MVCTestApplication
         {
 
             services.AddControllersWithViews();
-            services.AddSingleton<ITodoItemService, FakeTodoItemService>();              
+            services.AddScoped<ITodoItemService,RealTodoItemService>();
+            services.AddDbContext<TodoDBContext>(options =>
+                options.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
